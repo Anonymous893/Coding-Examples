@@ -1,3 +1,7 @@
+/*
+ * BattleShip
+ * Manages a game of BattleShip
+ */
 import java.util.*;
 public class BattleShip {
 
