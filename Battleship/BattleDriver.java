@@ -1,7 +1,3 @@
-/*Michelle Xie, Jessica Shi, Alec Luterman
- * BattleDriver
- * runs a game of battleship using the BattleShip class
- */
 import java.util.*;
 public class BattleDriver {
 
