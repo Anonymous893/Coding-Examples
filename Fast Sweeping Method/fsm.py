@@ -207,9 +207,7 @@ def local_activation(act_type="relu"):
 def main():
     nx = 256
     ny = 256
-    dh = 149 - 137 #Elvation comparison Baltimore to Rockville
-    dx = 69845.53  # Distance between Baltimore to Rockville
-
+    
     #f = 1e-3*np.ones((ny, nx))
     #f = np.exp(7)*np.ones((ny,nx))
     #f = (nx**2)*np.ones((ny,nx))
