@@ -1,7 +1,3 @@
-/*Michelle Xie, Jessica Shi, Alec Luterman
- * BattleShip
- * manages a game of battleship
- */
 import java.util.*;
 public class BattleShip {
 
