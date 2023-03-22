@@ -1,3 +1,7 @@
+/*
+ * BattleBoard
+ * Represents a board in a game of battleship which holds various ships
+ */
 public class BattleBoard {
 
 	private final int SMALLEST_SHIP = 2;
