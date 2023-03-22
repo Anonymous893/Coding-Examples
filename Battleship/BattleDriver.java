@@ -26,17 +26,14 @@ public class BattleDriver {
 
 			//prompts the user for an input until a valid input is received
 			do {
-
 				game.prompt();
 
 			}while(!game.valid());
 
-
 			game.updateBoard();
 			game.displayBoard();
 			System.out.println("--------------------------------\n");
-
+			
 		}while(!game.determineWinner());
 	}
-
 }
