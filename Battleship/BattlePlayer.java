@@ -1,3 +1,7 @@
+/*
+ * BattlePlayer
+ * Represents a single player in a game of battleship
+ */
 public class BattlePlayer {
 
 	private String name;
