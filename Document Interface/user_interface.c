@@ -1,8 +1,3 @@
-/* Jessica Shi
-UID: 117976373
-UMD Directory ID: jshi2021
-*/
-
 #include <stdio.h>
 #include <stdlib.h> 
 #include <string.h> 
