@@ -1,5 +1,3 @@
-# Jessica Shi, jshi2021, 117976373
-
 CC = gcc
 CFLAGS = -ansi -Wall -g -O0 -Wwrite-strings -Wshadow -pedantic-errors \
 	-fstack-protector-all -Wextra
