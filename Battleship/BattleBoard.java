@@ -23,26 +23,19 @@ public class BattleBoard {
 
 		//Initializes the gamepiece array with their names and sizes
 		for(int i = 0; i < ships.length; i ++) {
-
 			ships[i] = new GamePiece(i+SMALLEST_SHIP);
 			genLoc(ships[i], i+SMALLEST_SHIP);
-
 		}
-
 	}
 
 	//Checks if a spot has not been attacked yet
 	private boolean spotOpen(int[] loc, int[][]matrix) {
-
 		return matrix[loc[0]][loc[1]]==0;
-
 	}
 
 	//checks if all of a players ships have been sunk
 	public boolean gameOver() {
-
 		return ships.length == shipsSunk;
-
 	}
 
 	//checks if an input is valid
@@ -52,7 +45,6 @@ public class BattleBoard {
 		if(input.length() < 2) {
 
 			return false;
-
 		}
 
 		String letter = input.substring(0, 1);
@@ -60,28 +52,20 @@ public class BattleBoard {
 
 		//parses the number portion of the input
 		try {
-
 			col = Integer.parseInt(input.substring(1)) - 1;
-
 		}catch(NumberFormatException e) {
-
 			return false;
-
 		}
 
 		//checks if the number portion of the input in in bounds
 		if ((col < 0) || (col >= DIMENSIONS[1])){
-
 			return false;
-
 		}
 
 		//checks if the letter portion of the input is in bounds
 		int row = letter.compareTo("A");
 		if ((row < 0) || (row >= DIMENSIONS[0])) {
-
 			return false;
-
 		}
 
 		fixedInput = new int[2];
@@ -108,16 +92,11 @@ public class BattleBoard {
 
 				System.out.println(NAMES[index] + " sunk");
 				shipsSunk++;
-
 			}
-
 		}
-
 		else {
-
 			board[fixedInput[0]][fixedInput[1]]=1;
 			System.out.println("Attack missed");
-
 		}
 
 	}
@@ -131,23 +110,19 @@ public class BattleBoard {
 
 		//Creates a random direction and starting point
 		do {
-
 			direction = (int) (Math.random()*2);
 
 			//Horizontal
 			if(direction == 0) {
-
 				row = calcPoint(DIMENSIONS[0]-size);
 				col = calcPoint(DIMENSIONS[1]);
 			}
 
 			//Vertical
 			else {
-
 				row = calcPoint(DIMENSIONS[0]);
 				col = calcPoint(DIMENSIONS[1]-size);
 			}
-
 		}while(!openSpace(size, row, col, direction));
 
 		//Starting location
@@ -155,58 +130,42 @@ public class BattleBoard {
 
 		//Builds off of starting location horizontally
 		if(direction==0) {
-
 			for(int i  = row; i<row+size; i++) {
-
 				shipInfo[i][col] = size;
 			}
 		}
 
 		//Builds off of starting location vertically
 		else {
-
 			for(int i  = col; i<col+size; i++) {
-
 				shipInfo[row][i] = size;
 			}
-
 		}
-
 	}
 
 	//Calculates random starting location coordinates
 	private int calcPoint(int length) {
-
 		return (int) (Math.random()*length);
-
 	}
 
 	//determines which open space method to go to
 	private boolean openSpace(int size, int row, int col, int direction) {
 
 		if(direction==0) {
-
 			return openSpaceCol(size, row, col);
-
 		}else {
-
 			return openSpaceRow(size, row, col);
-
 		}
 	}
 
 	//checks a given row to see if a given ship can fit
 	private boolean openSpaceRow(int size, int row, int col) {
-
+		
 		for(int i = col; i<col+size; i++) {
-
 			if(i>= DIMENSIONS[1]||shipInfo[row][i]!=0) {
-
 				return false;
 			}
-
 		}
-
 		return true;
 	}
 
@@ -214,29 +173,19 @@ public class BattleBoard {
 	private boolean openSpaceCol(int size, int row, int col) {
 
 		for(int i = row; i<row+size; i++) {
-
 			if(i>=DIMENSIONS[0]||shipInfo[i][col]!=0) {
-
 				return false;
-				
 			}
-
 		}
-
 		return true;
-
 	}
 
 	public String toString() {
-
 		return print(shipInfo);
-
 	}
 
 	public void print() {
-
 		System.out.println(print(board));
-
 	}
 
 	//creates a String based off of a variation of the board to be printed later
@@ -245,9 +194,7 @@ public class BattleBoard {
 		//number heading
 		String toReturn = " ";
 		for(int i = 0; i<DIMENSIONS[1]; i++) {
-
 			toReturn+= "  " + (i+1);
-
 		}
 		toReturn +="\n";
 
@@ -260,11 +207,8 @@ public class BattleBoard {
 				//info at a given spot
 				toReturn += matrix[row][col] + "  ";
 			}
-
 			toReturn += "\n";
 		}
-
 		return toReturn;
 	}
-
 }
