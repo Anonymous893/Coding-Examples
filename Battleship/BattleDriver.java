@@ -1,3 +1,7 @@
+/*
+ * BattleDriver
+ * Runs a game of battleship using the BattleShip class
+ */
 import java.util.*;
 public class BattleDriver {
 
