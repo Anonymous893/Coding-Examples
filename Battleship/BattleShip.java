@@ -16,37 +16,29 @@ public class BattleShip {
 		players[1] = new BattlePlayer(two);
 
 		turn = (int)(Math.random()*2);
-
 	}
 
 	//prompts the user for their input
 	public void prompt() {
-
+		
 		Scanner keyboard = new Scanner(System.in);
 		System.out.print(players[turn%2].getName() + " enter your coordinates: ");
 		input = keyboard.nextLine();
-
 	}
 
 	//checks if the last input is valid
 	public boolean valid() {
-
 		return players[turn%2].checkInput(input);
-
 	}
 
 	//updates the board
 	public void updateBoard() {
-
 		players[turn%2].update();
-
 	}
 
 
 	public void displayBoard() {
-
 		players[turn%2].printBoard();
-
 	}
 
 	//determines if someone has won and prints their name if they have
@@ -54,17 +46,12 @@ public class BattleShip {
 	public boolean determineWinner() {
 
 		if(players[turn%2].gameOver()) {
-
 			System.out.println(players[turn%2].getName() + " won the game");
 			return true;
-
 		}else {
-
 			turn++;
 			return false;
-
 		}
-
 	}
 	
 	//prints out the rules
@@ -86,6 +73,5 @@ public class BattleShip {
 		System.out.println("while a '2' represents a hit.");
 		System.out.println("A '0' represents an unattacked spot.");
 		System.out.println("-------------------------------------------------------");
-
 	}
 }
