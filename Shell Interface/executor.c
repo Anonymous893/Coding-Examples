@@ -1,5 +1,3 @@
-/* Jessica Shi, jshi2021, 117976373 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
