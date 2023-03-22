@@ -1,8 +1,3 @@
-/*Michelle Xie, Jessica Shi, Alec Luterman
- * BattlePlayer
- * represents a single player in a game of battleship
- */
-
 public class BattlePlayer {
 
 	private String name;
