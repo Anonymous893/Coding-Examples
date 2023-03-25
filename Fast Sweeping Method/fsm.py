@@ -1,5 +1,4 @@
 # Implementation of the Fast Sweeping Method authored by Hongkai Zhao
-# Code base from Dr. Triet Le, with my changes to read the data from a generated tif file
 
 import random
 from typing import Dict
